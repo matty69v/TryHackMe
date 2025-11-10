@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-02-19 00:00:00 +0100
 title: 'TryHackMe - Tryhackme Burg3rbytes'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-02-19 00:00:00 +0100
 Burg3r Bytes was a room where we use a race condition on checkout to use the same voucher multiple times to get a bigger discount and buy an item. After successfully buying an item, we get redirected to a receipt page, which is vulnerable to Server Side Template Injection. Using this, we are able to get a shell on a container. Inside the container, we find a client program that allows us to read files from the host by connecting to a server on the host. Using this to read the server's public key allows us to also write files on the host by using the same client. We use this write privilege to add an SSH key for root and get a shell as root on the host.
 
 [![Tryhackme Room Link](/images/tryhackme_burg3rbytes/room_card.webp)](https://tryhackme.com/r/room/burg3rbytes){: .center }

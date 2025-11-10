@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-08-26 00:00:00 +0100
 title: 'TryHackMe - Mouse Trap'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-08-26 00:00:00 +0100
 **Mouse Trap** was another purple team room where we started on the attacker side and exploited a remote code execution **(RCE)** vulnerability to gain a foothold. After that, we exploited an unquoted service path to escalate our privileges and established basic persistence.
 
 Next, we moved to the defender side and answered questions about an attacker performing the same attack chain as us by investigating the **Sysmon** logs.
@@ -128,6 +130,7 @@ Microsoft Windows [Version 10.0.17763.1821]
 -----
 
 
+date: 2024-08-26 00:00:00 +0100
 C:\Windows\system32>whoami
 mousetrap\purpletom
 
@@ -214,6 +217,7 @@ Microsoft Windows [Version 10.0.17763.1821]
 -----
 
 
+date: 2024-08-26 00:00:00 +0100
 C:\Windows\system32>
 ```
 
@@ -255,6 +259,7 @@ Microsoft Windows [Version 10.0.17763.1821]
 -----
 
 
+date: 2024-08-26 00:00:00 +0100
 C:\Windows\system32>whoami
 nt authority\system
 
@@ -325,6 +330,7 @@ With that, we can move on to answering the questions.
 
 ---
 
+date: 2024-08-26 00:00:00 +0100
 The first three questions are all related to the foothold. Since the foothold was achieved by a remote code execution vulnerability in the `Mobile Mouse Server`, we will see the payload running under `Mobile Mouse.exe`.
 
 Checking the details for the second `cmd.exe` process spawned under `Mobile Mouse.exe`, we get the answers to the first three questions.
@@ -345,6 +351,7 @@ Checking the details for the second `cmd.exe` process spawned under `Mobile Mous
 
 ---
 
+date: 2024-08-26 00:00:00 +0100
 The next two questions are related to the enumeration performed by the attacker for privilege escalation.
 
 We can see the executable run by the attacker using the remote code execution vulnerability, spawning a command shell, and `SharpUp.exe` being run from it. Checking the details for the `SharpUp.exe` process, we can get the answers to the questions.
@@ -361,6 +368,7 @@ We can see the executable run by the attacker using the remote code execution vu
 
 ---
 
+date: 2024-08-26 00:00:00 +0100
 Next, we move on to the unquoted service path exploit for privilege escalation.
 
 After the `SharpUp.exe` command, we can see the attacker executing two `Powershell` commands. The first one simply makes a request to the attacker's web server, and the second one actually downloads and saves the executable for the unquoted service path exploit.
@@ -377,6 +385,7 @@ After the transfer, we can also see the attacker using `net.exe` to start the se
 
 ---
 
+date: 2024-08-26 00:00:00 +0100
 Next, we move on to the privileged shell the attacker got from the service.
 
 First, we are asked about the full command line for the service process after the path hijack. We can find this by checking the `Parent command line` value for the command shell spawned under the `Mouse.exe` service executable.
@@ -389,6 +398,7 @@ First, we are asked about the full command line for the service process after th
 
 ---
 
+date: 2024-08-26 00:00:00 +0100
 Finally, we move on to the persistence established by the attacker.
 
 The first question asks for the password for the backdoor account created by the attacker. We can see the attacker using `net.exe` to achieve this, and by checking the details for the process, we can find the answer in the command line.

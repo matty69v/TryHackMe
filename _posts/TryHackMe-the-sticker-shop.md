@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-11-25 00:00:00 +0100
 title: 'TryHackMe - The Sticker Shop'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-11-25 00:00:00 +0100
 **The Sticker Shop** was a very simple room about exploiting a **Cross-Site Scripting (XSS)** vulnerability to steal the contents of a page and retrieve the flag.
 
 [![Tryhackme Room Link](/images/tryhackme_the_sticker_shop/room_card.webp)](https://tryhackme.com/r/room/thestickershop){: .center }

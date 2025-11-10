@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-03-25 00:00:00 +0100
 title: 'TryHackMe - Tryhackme Clocky'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-03-25 00:00:00 +0100
 Clocky started with us finding a backup on a webserver that included another webserver's source code. Reading the source code, we saw the application using time and username to create password reset tokens. With this, we were able to create our own tokens and reset the password for the administrator user. After logging in as the administrator user, we used an SSRF vulnerability to reach a SQL file hosted on another web server. Inside this file, we found a password, and combining it with the usernames we got from the source code, we were able to get a SSH session. At last, after finding the credentials for the database and dumping the MySQL user's hashes, we were able to crack them and use the same password to get access as root.
 
 [![Tryhackme Room Link](/images/tryhackme_clocky/room_card.webp)](https://tryhackme.com/r/room/clocky){: .center }

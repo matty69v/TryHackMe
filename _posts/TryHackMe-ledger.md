@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-07-22 00:00:00 +0100
 title: 'TryHackMe - Ledger'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-07-22 00:00:00 +0100
 **Ledger** was a straightforward room where we gained access via passwords found in user descriptions and escalated to **Administrator** by exploiting the **ESC1** vulnerability in a certificate template.
 
 [![Tryhackme Room Link](/images/tryhackme_ledger/room_card.webp)](https://tryhackme.com/room/ledger){: .center }

@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-03-11 00:00:00 +0100
 title: 'TryHackMe - Cheese Ctf'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-03-11 00:00:00 +0100
 Cheese CTF was a straightforward room where we used SQL injection to bypass a login page and discovered an endpoint vulnerable to `LFI`. By utilizing PHP filters chain to turn the `LFI` into `RCE`, we gained a foothold on the machine. After that, we exploited a writable `authorized_keys` file to pivot to another user. As this user, we fixed a syntax error in a timer and used `sudo` privileges to start it, which allowed us to run a service that created a SUID binary. By exploiting this SUID binary, we were able to escalate our privileges to the `root` user.
 
 [![Tryhackme Room Link](/images/tryhackme_cheese_ctf/room_card.webp)](https://tryhackme.com/r/room/cheesectfv10){: .center }

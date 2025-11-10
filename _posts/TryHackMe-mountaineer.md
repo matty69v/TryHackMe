@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-08-19 00:00:00 +0100
 title: 'TryHackMe - Mountaineer'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-08-19 00:00:00 +0100
 **Mountaineer** started by discovering a **WordPress** instance and identifying a plugin vulnerable to **authenticated RCE**. By exploiting the **nginx off-by-slash** vulnerability to read files on the server, we discovered a vhost running a **Roundcube** instance. After logging into **Roundcube** with predictable credentials, we found credentials for **WordPress**, along with some information about a user. Using the discovered **WordPress** credentials, we exploited the aforementioned plugin and gained a shell.
 
 Next, we found a **KeePass** database belonging to the user we had information about. By utilizing this information to create a wordlist, we successfully uncovered the master password for the **KeePass** database. Inside, we found credentials for another user and switched to that user. Checking the user's **bash history**, we found the password for the **root** user, which allowed us to complete the room.

@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-05-13 00:00:00 +0100
 title: 'TryHackMe - Dx2 Hells Kitchen'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-05-13 00:00:00 +0100
 DX2: Hell's Kitchen started with enumerating a couple of Javascript files on a web application to discover an API endpoint vulnerable to SQL injection. Using this to gain a set of credentials, we used them to login to another web application. There, we discovered a websocket vulnerable to command injection and used it to get a shell. After getting a shell and enumerating the file system, we discovered a password and used it to pivot to another user. As this user, we discovered another set of credentials and were able to pivot to yet another user. With this new user, we were able to run mount.nfs as the root user with sudo and use it to escalate to the root user.
 
 [![Tryhackme Room Link](/images/tryhackme_dx2_hells_kitchen/room_card.webp)](https://tryhackme.com/r/room/dx2hellskitchen){: .center }
@@ -297,6 +299,7 @@ Status: active
 
 To                         Action      From
 --                         ------      ----
+date: 2024-05-13 00:00:00 +0100
 80/tcp                     ALLOW       Anywhere
 4346/tcp                   ALLOW       Anywhere
 80/tcp (v6)                ALLOW       Anywhere (v6)

@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-02-26 00:00:00 +0100
 title: 'TryHackMe - Tryhackme Bypass'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-02-26 00:00:00 +0100
 Bypass begins with discovering a set of instructions and following these instructions to acquire a password. This password allowed us to login to a web application and get to another login page, where we discovered a way to execute remote commands. After using this to discover the hostname, which also works as the username, along with the same password from before to login on this new login page, we completed the room by discovering the last flag.
 
 [![Tryhackme Room Link](/images/tryhackme_bypass/room_card.webp)](https://tryhackme.com/r/room/bypass){: .center }
@@ -186,6 +188,7 @@ PING cctv.thm (10.10.202.170) 56(84) bytes of data.
 64 bytes from cctv.thm (10.10.202.170): icmp_seq=5 ttl=63 time=76.2 ms
 
 --- cctv.thm ping statistics ---
+date: 2024-02-26 00:00:00 +0100
 5 packets transmitted, 5 received, 0% packet loss, time 4010ms
 rtt min/avg/max/mdev = 76.016/76.774/78.318/0.877 ms
 ```

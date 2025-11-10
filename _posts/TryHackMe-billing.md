@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-01-15 00:00:00 +0100
 title: 'TryHackMe - Billing'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-01-15 00:00:00 +0100
 **Billing** was a straightforward room where we exploited a command injection vulnerability in the **MagnusBilling** web application to gain an initial foothold. Afterwards, using our sudo privileges, which allowed us to interact with and configure the **fail2ban-server**, we successfully escalated to the **root** user and completed the room.
 
 [![Tryhackme Room Link](/images/tryhackme_billing/room_card.webp)](https://tryhackme.com/room/billing){: .center }

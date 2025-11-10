@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-03-18 00:00:00 +0100
 title: 'TryHackMe - Chrome'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-03-18 00:00:00 +0100
 Chrome was a room all about decryption. As a start, we are given a packet capture file with SMB traffic. We are able to extract two files from this traffic: a .NET assembly file and a file encrypted with the mentioned assembly. By reverse engineering and modifying the assembly file, we are able to decrypt the encrypted file and get a zip archive. Inside the archive, we find some data belonging to Google Chrome along with a DPAPI masterkey. By cracking the masterkey, we are able to get the user’s password and use it to decrypt the masterkey. With the decrypted masterkey, we are also able to decrypt the encryption key used by Google Chrome to encrypt users’s saved passwords and decrypt those passwords.
 
 ![Tryhackme Room Link](/images/tryhackme_chrome/room_card.webp)

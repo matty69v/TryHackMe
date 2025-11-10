@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-10-14 00:00:00 +0100
 title: 'TryHackMe - Robots'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-10-14 00:00:00 +0100
 **Robots** started with basic enumeration of a web application to discover an endpoint with register and login functionalities. Using an **XSS** vulnerability in the username field of registered accounts, we were able to steal the cookies of the admin user, which granted us access to another endpoint vulnerable to **Remote File Inclusion (RFI)**. We exploited this to gain a shell inside a container.
 
 Inside the container, we found the database configuration, and by pivoting from it to connect to the database, we managed to capture the hashes for the users. Cracking the hashes for one of the users allowed us to use **SSH** to gain a shell on the host.

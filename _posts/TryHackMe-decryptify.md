@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-04-29 00:00:00 +0100
 title: 'TryHackMe - Decryptify'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-04-29 00:00:00 +0100
 **Decryptify** started with deobfuscating a **JavaScript** file to reveal a hardcoded password, which we used to access a code snippet responsible for generating invite codes. After that, by fuzzing the web application, we discovered a log file containing an invite code and a couple of email addresses. Combining this with the **insecure randomness** vulnerability in the invite code generation logic allowed us to forge our own invite code and access the dashboard to capture the first flag.
 
 After that, by using a **padding oracle attack**, we were able to execute commands on the target system to capture the last flag and complete the room.

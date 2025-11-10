@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-12-02 00:00:00 +0100
 title: 'TryHackMe - Tryhackme Tricipher Summit'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-12-02 00:00:00 +0100
 TriCipher Summit required us to solve three different challenges to complete it.
 First, performing a supply chain attack to discover a set of credentials.
 Second, reverse engineering custom cryptography to be able to brute force an OTP.

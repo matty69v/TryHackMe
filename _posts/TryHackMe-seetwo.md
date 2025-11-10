@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-10-21 00:00:00 +0100
 title: 'TryHackMe - Seetwo'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-10-21 00:00:00 +0100
 **SeeTwo** was a room about extracting a basic **C2** client from a packet capture file and reverse engineering it to understand its functionality. Using the same packet capture file, we then extracted the **C2** traffic. By understanding how the client operates, we were able to decrypt the traffic to reveal all executed commands and their outputs, allowing us to answer all the questions in the room.
 
 [![Tryhackme Room Link](/images/tryhackme_seetwo/room_card.webp)](https://tryhackme.com/r/room/seetworoom){: .center }

@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-12-23 00:00:00 +0100
 title: 'TryHackMe - Ua High School'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-12-23 00:00:00 +0100
 U.A. High School began by discovering a `PHP` file on the web application and fuzzing to identify parameter names. Upon finding a parameter that allowed us to run commands, we utilized it to obtain a shell. While enumerating the file system within the shell, we discovered a passphrase and a corrupted image. Fixing the image by changing the magic bytes from `PNG` to `JPG` and using the passphrase to extract the hidden data from the image, provided us with user credentials. After getting a shell as this user using `SSH`, we were able to execute a script as the root user using `sudo`. The script contained an arbitrary file write vulnerability, which we exploited to gain a shell as the `root` user.
 
 [![Tryhackme Room Link](/images/tryhackme_ua_high_school/room_card.webp)](https://tryhackme.com/r/room/yueiua){: .center }

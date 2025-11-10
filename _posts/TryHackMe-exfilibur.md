@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-05-27 00:00:00 +0100
 title: 'TryHackMe - Exfilibur'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-05-27 00:00:00 +0100
 Exfilibur begins by exploiting multiple vulnerabilities in BlogEngine.NET to discover a password and also achieve remote code execution. After using remote code execution to get a shell, it is possible to discover another user. Trying the password we have found before for this user against the RDP service, we get a session. Spawning an elavated shell inside this RDP session, the user has useful but disabled privileges. Enabling these privileges, we use them to get a shell as System.
 
 ![Tryhackme Room Link](/images/tryhackme_exfilibur/room_card.webp)
@@ -341,6 +343,7 @@ Now that we have a shell, we can get a list of all the users on the machine.
 c:\windows\system32\inetsrv>net user
 User accounts for \\EXFILIBUR
 -------------------------------------------------------------------------------
+date: 2024-05-27 00:00:00 +0100
 Administrator            DefaultAccount           Guest                    
 kingarthy                merlin                   WDAGUtilityAccount       
 The command completed successfully.
@@ -368,6 +371,7 @@ C:\Users\kingarthy>whoami /priv
 PRIVILEGES INFORMATION
 ----------------------
 
+date: 2024-05-27 00:00:00 +0100
 Privilege Name                Description                    State
 ============================= ============================== ========
 SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
@@ -386,6 +390,7 @@ C:\Windows\system32>whoami /priv
 PRIVILEGES INFORMATION
 ----------------------
 
+date: 2024-05-27 00:00:00 +0100
 Privilege Name                Description                              State
 ============================= ======================================== ========
 SeTakeOwnershipPrivilege      Take ownership of files or other objects Disabled
@@ -411,6 +416,7 @@ PS C:\Windows\system32> whoami /priv
 PRIVILEGES INFORMATION
 ----------------------
 
+date: 2024-05-27 00:00:00 +0100
 Privilege Name                Description                              State
 ============================= ======================================== =======
 SeTakeOwnershipPrivilege      Take ownership of files or other objects Enabled

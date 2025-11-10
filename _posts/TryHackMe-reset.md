@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-10-07 00:00:00 +0100
 title: 'TryHackMe - Reset'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-10-07 00:00:00 +0100
 After capturing a user's hash with forced authentication by uploading a malicious file to a SMB share, we were able to crack the hash and get a set of credentials. Using these credentials to enumerate the Active Directory, there were some AS-REP Roastable users. Performing AS-REP Roast to get the hash for these users, we were successful in cracking one of the hashes and got another set of credentials. We reset the passwords of several accounts in a sequence using the newly discovered credentials in order to get to an account with constrained delegation rights. Impersonating the Administrator user with constrained delegation, we got a shell as Administrator.
 
 ![Tryhackme Room Link](/images/tryhackme_reset/room_card.webp)
@@ -72,6 +74,7 @@ SMB         10.10.220.239   445    HAYSTACK         [+] thm.corp\anonymous:
 SMB         10.10.220.239   445    HAYSTACK         [+] Enumerated shares
 SMB         10.10.220.239   445    HAYSTACK         Share           Permissions     Remark
 SMB         10.10.220.239   445    HAYSTACK         -----           -----------     ------
+date: 2024-10-07 00:00:00 +0100
 SMB         10.10.220.239   445    HAYSTACK         ADMIN$                          Remote Admin
 SMB         10.10.220.239   445    HAYSTACK         C$                              Default share
 SMB         10.10.220.239   445    HAYSTACK         Data            READ,WRITE      
@@ -185,6 +188,7 @@ $ evil-winrm -i haystack.thm.corp -u 'automate' -p '[REDACTED]'
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
+date: 2024-10-07 00:00:00 +0100
 -a----        6/21/2016   3:36 PM            527 EC2 Feedback.website
 -a----        6/21/2016   3:36 PM            554 EC2 Microsoft Windows Guide.website
 -a----        6/16/2023   4:35 PM             31 user.txt

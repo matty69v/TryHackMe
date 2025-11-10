@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-01-29 00:00:00 +0100
 title: 'TryHackMe - Brains'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-01-29 00:00:00 +0100
 **Brains** was a room focused on an **authentication bypass** vulnerability in **TeamCity** (**CVE-2024-27198**). We began as an attacker, exploiting the vulnerability to achieve **remote code execution (RCE)** and capture a flag. Afterward, we switched roles to become a defender, using **Splunk** to inspect logs and answer questions related to an attacker who had compromised a machine using the same vulnerability.
 
 [![Tryhackme Room Link](/images/tryhackme_brains/room_card.webp)](https://tryhackme.com/r/room/brains){: .center }

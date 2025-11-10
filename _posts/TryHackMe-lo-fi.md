@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-07-29 00:00:00 +0100
 title: 'TryHackMe - Lo Fi'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-07-29 00:00:00 +0100
 **Lo-Fi** was a very simple room where we exploited a `Local File Inclusion (LFI)` vulnerability to read the flag. Although it was not necessary to complete the room, I will also demonstrate how we could have escalated this `LFI` vulnerability to `RCE` using log poisoning.
 
 [![Tryhackme Room Link](/images/tryhackme_lo_fi/room_card.webp)](https://tryhackme.com/r/room/lofi){: .center }

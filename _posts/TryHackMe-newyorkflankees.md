@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-09-09 00:00:00 +0100
 title: 'TryHackMe - Newyorkflankees'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-09-09 00:00:00 +0100
 New York Flankees started with using a padding oracle attack to discover a set of credentials and use them to gain access to an admin panel. On the admin panel, we were able to execute system commands and used this to gain a shell inside a container. After noticing the Docker socket was mounted inside the container, we abused it to escape the container and gain root access on the host.
 
 [![Tryhackme Room Link](/images/tryhackme_newyorkflankees/room_card.webp)](https://tryhackme.com/r/room/thenewyorkflankees){: .center }

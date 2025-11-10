@@ -1,4 +1,5 @@
 ﻿---
+date: 2025-01-13 00:00:00 +0100
 title: 'TryHackMe - W1seguy'
 author : Matty
 categories: [TryHackMe]
@@ -10,6 +11,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2025-01-13 00:00:00 +0100
 W1seGuy was a simple room, where we use known plaintext attack to discover a XOR key and use it to get the flags.
 
 [![Tryhackme Room Link](/images/tryhackme_w1seguy/room_card.webp)](https://tryhackme.com/r/room/w1seguy){: .center }

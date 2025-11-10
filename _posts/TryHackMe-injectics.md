@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-07-08 00:00:00 +0100
 title: 'TryHackMe - Injectics'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-07-08 00:00:00 +0100
 Injectics started with using an SQL injection to bypass a login form and land on a page where we were able to edit some data. Also, by discovering another SQL injection with edit functionality, we were able to extract some credentials from the database. Using them, we were able to login to the admin panel. There, we discovered a server-side template injection vulnerability that allowed us to execute commands on the machine. Using this, we were able to get a shell, read the second flag, and complete the room.
 
 [![Tryhackme Room Link](/images/tryhackme_injectics/room_card.webp)](https://tryhackme.com/r/room/injectics){: .center }

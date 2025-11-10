@@ -1,4 +1,5 @@
 ﻿---
+date: 2025-02-03 00:00:00 +0100
 title: 'TryHackMe - Whyhackme'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2025-02-03 00:00:00 +0100
 WhyHackMe has an FTP server that accepts anonymous logins. There is a note on this FTP server mentioning an endpoint on the webserver that contains user credentials and is only accessible by localhost. Using an XSS vulnerability on the webserver, it is possible to make the admin user retrieve the credentials for us and get a SSH session. Upon discovering a HTTPS server running and the iptables rule denying access to it, we will replace the iptables rule using sudo to accept connections. Now that we are able to access the HTTPS server, we will discover the endpoint and parameters required for running commands by decrypting the TLS traffic inside a packet capture file we found with the certificate key of the HTTPS server and use this to get a shell as www-data. At last, we will use sudo to get a shell as root.
 
 ![Tryhackme Room Link](/images/tryhackme_whyhackme/room_card.webp)
@@ -243,6 +245,7 @@ It mentions a backdoor placed by attackers at `/usr/lib/cgi-bin/` and an iptable
 Downloading the `capture.pcap` and examining it with `Wireshark`, it looks like `TLS` encrypted `HTTP` traffic. There is also a host name: `boring.box`.
 
 ---
+date: 2025-02-03 00:00:00 +0100
 Checking the config for running webservers, this must be the backdoored server.
 
 ```

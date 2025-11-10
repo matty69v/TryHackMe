@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-01-22 00:00:00 +0100
 title: 'TryHackMe - Block'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-01-22 00:00:00 +0100
 Block was a short room about extracting hashes from a given LSASS dump and using them to decrypt SMB3 traffic inside a given packet capture file.
 
 [![Tryhackme Room Link](/images/tryhackme_block/room_card.webp)](https://tryhackme.com/r/room/blockroom){: .center }

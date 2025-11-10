@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-08-12 00:00:00 +0100
 title: 'TryHackMe - Moebius'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-08-12 00:00:00 +0100
 **Moebius** started by abusing a **nested SQL injection** vulnerability to achieve **Local File Inclusion (LFI)**, which we then turned into **code execution** using **PHP filters chain**. We then bypassed disabled functions to achieve **Remote Code Execution (RCE)**, allowing us to gain a shell inside a Docker container. By escaping the container through mounting the host's file system, we captured the user flag. Lastly, we found the root flag inside the database and completed the room.
 
 [![Tryhackme Room Link](/images/tryhackme_moebius/room_card.webp)](https://tryhackme.com/room/moebius){: .center }

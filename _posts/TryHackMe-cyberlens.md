@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-04-22 00:00:00 +0100
 title: 'TryHackMe - Tryhackme Cyberlens'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-04-22 00:00:00 +0100
 CyberLens included using a command injection vulnerability in Apache Tika to get a foothold and abuse AlwaysInstallElevated to escalate to Administrator.
 
 [![Tryhackme Room Link](/images/tryhackme_cyberlens/room_card.webp)](https://tryhackme.com/r/room/cyberlensp6){: .center }
@@ -184,6 +186,7 @@ PS C:\Users\CyberLens\Documents\Management> dir
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
+date: 2024-04-22 00:00:00 +0100
 -a----         6/7/2023   3:09 AM             90 CyberLens-Management.txt
 ```
 
@@ -205,6 +208,7 @@ PS C:\Users\CyberLens\Documents\Management> whoami /groups
 GROUP INFORMATION
 -----------------
 
+date: 2024-04-22 00:00:00 +0100
 Group Name                             Type             SID          Attributes                                        
 ====================================== ================ ============ ==================================================
 Everyone                               Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
@@ -272,6 +276,7 @@ PS C:\ProgramData> net user
 User accounts for \\CYBERLENS
 
 -------------------------------------------------------------------------------
+date: 2024-04-22 00:00:00 +0100
 admin                    Administrator            CyberLens                
 DefaultAccount           Guest                    WDAGUtilityAccount       
 The command completed successfully.

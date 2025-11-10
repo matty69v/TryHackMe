@@ -1,4 +1,5 @@
 ﻿---
+date: 2025-01-06 00:00:00 +0100
 title: 'TryHackMe - Voyage'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2025-01-06 00:00:00 +0100
 **Voyage** started with exploiting a vulnerability in **Joomla! CMS** to leak its configuration and obtain a set of credentials, which we used with **SSH** to get a shell inside a container.
 
 Using our access to this container to enumerate the internal network, we discovered another web application with an **insecure deserialization** vulnerability and exploited it to get a shell inside another container.

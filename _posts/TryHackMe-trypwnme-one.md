@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-12-09 00:00:00 +0100
 title: 'TryHackMe - Trypwnme One'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-12-09 00:00:00 +0100
 TryPwnMe One was a room dedicated to binary exploitation (pwn), featuring seven challenges related to this subject.
 
 [![Tryhackme Room Link](/images/tryhackme_trypwnme_one/room_card.webp)](https://tryhackme.com/r/room/trypwnmeone){: .center }
@@ -507,6 +509,7 @@ $ checksec ./materials-TryPwnMeOne/TheLibrarian/libc.so.6
 
 ---
 
+date: 2024-12-09 00:00:00 +0100
 At this stage, we can attempt to leak an address from the `libc` library to determine its location in memory. But to achieve this, we need to know a bit about the `PLT` (Procedure Linkage Table) and `GOT` (Global Offset Table).
 
 The `GOT` stores addresses for global variables and functions used by the binary, while the `PLT` facilitates calling external functions, even if they are loaded at different addresses each time the binary runs.
@@ -519,12 +522,14 @@ On subsequent calls to the same function, the `PLT` entry uses the updated addre
 
 ---
 
+date: 2024-12-09 00:00:00 +0100
 In our case, the binary calls the `puts` function right before reading our input. Therefore, the `GOT` entry for `puts` will have been resolved with the function’s address from `libc`. We also know that calling a function's `PLT` entry is equivalent to calling the function itself.
 
 By calling the `puts` function with its `GOT` entry as an argument, we can make the binary print the address of the `puts` function from `libc`. This address allows us to calculate the base address where `libc` is loaded and subsequently determine the addresses of other functions within `libc`.
 
 ---
 
+date: 2024-12-09 00:00:00 +0100
 Also, to be able call the `puts` function with the `GOT` entry as an argument, we need to pass the argument in the `RDI` register according to the Linux x64 calling convention. To achieve this, we need a way to load the address of the `GOT` entry into the `RDI` register. For this, we will use a gadget.
 
 Gadgets are basically sequences of instructions that end with a `ret` instruction. They allow us to perform specific operations while maintaining control over the program’s flow due to the `ret` instruction at the end.

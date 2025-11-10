@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-07-01 00:00:00 +0100
 title: 'TryHackMe - Hammer'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-07-01 00:00:00 +0100
 Hammer started with discovering a log file on the web application with fuzzing and an email address inside. With a valid email address in hand, we were able to request a password reset for the user. After bypassing the rate limit to be able to brute-force the password recovery code, we were successful in resetting the password for the user and accessing the dashboard. After gaining access to the dashboard, we used forged JWTs to escalate our role from user to admin to be able to run commands and completed the room.
 
 [![Tryhackme Room Link](/images/tryhackme_hammer/room_card.webp)](https://tryhackme.com/r/room/hammer){: .center }

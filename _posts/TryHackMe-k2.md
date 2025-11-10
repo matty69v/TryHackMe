@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-07-15 00:00:00 +0100
 title: 'TryHackMe - K2'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-07-15 00:00:00 +0100
 **K2** had us solve three machines in sequence, using our findings from the previous machines to tackle the next one.
 
 We began with **Base Camp**, where we targeted a web application and discovered several virtual hosts through fuzzing. By exploiting an **XSS** vulnerability in one of the virtual hosts, we managed to gain access to the other one by stealing a cookie. Subsequently, we leveraged a **SQL injection** vulnerability to extract credentials from the database. We used one of these credentials to gain a shell via **SSH**. As this user, we found a password in one of the web server logs, which we used to obtain **root** access.
@@ -373,6 +375,7 @@ Checking the `C:\Users\r.bud\Documents`, we find two files.
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
+date: 2024-07-15 00:00:00 +0100
 -a----        1/29/2024   7:07 PM            327 notes.txt
 -a----        1/29/2024   7:09 PM            349 note_to_james.txt
 ```
@@ -493,6 +496,7 @@ Checking the group memberships for the `j.smith` user in either **BloodHound** o
 GROUP INFORMATION
 -----------------
 
+date: 2024-07-15 00:00:00 +0100
 Group Name                                 Type             SID                                          Attributes
 ========================================== ================ ============================================ ===============================================================
 ...
@@ -650,6 +654,7 @@ After obtaining a shell, we notice an interesting directory at `C:\`, named `Scr
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
+date: 2024-07-15 00:00:00 +0100
 d-----       11/14/2018   6:56 AM                EFI
 d-----        5/13/2020   5:58 PM                PerfLogs
 d-r---       11/14/2018   4:10 PM                Program Files
@@ -670,6 +675,7 @@ Inside the `C:\Scripts` directory, we see a script called `backup.bat`, which co
 
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
+date: 2024-07-15 00:00:00 +0100
 -a----        5/30/2023   1:32 AM             92 backup.bat
 
 

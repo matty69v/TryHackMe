@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-05-06 00:00:00 +0100
 title: 'TryHackMe - Dodge'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-05-06 00:00:00 +0100
 Dodge started by inspecting the certificate of a https webserver to get a list of subdomains and enumerating these subdomains to find a PHP endpoint that allowed disabling the UFW firewall. After disabling the firewall, it was possible to access a FTP server and get a SSH key for a user, which allowed us to get a shell on the machine. After this, using port forwarding to access an internal website and logging in with the credentials found in the comments of the same website gave us credentials for another user. With this new user, we were able to abuse sudo privileges and get a shell as root.
 
 ![Tryhackme Room Link](/images/tryhackme_dodge/room_card.webp)
@@ -128,6 +130,7 @@ New profiles: skip
 
 To                         Action      From
 --                         ------      ----
+date: 2024-05-06 00:00:00 +0100
 80                         ALLOW IN    Anywhere                  
 443                        ALLOW IN    Anywhere                  
 22                         ALLOW IN    Anywhere                  

@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-06-17 00:00:00 +0100
 title: 'TryHackMe - Hack Back'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-06-17 00:00:00 +0100
 **Hack Back** started with reverse-engineering an executable file to discover an email address and a password. After that, we used these credentials to send a phishing email and obtain a shell. Lastly, we completed the room by hacking a smart contract.
 
 [![Tryhackme Room Link](/images/tryhackme_hack_back/room_card.webp)](https://tryhackme.com/r/room/hackback){: .center }

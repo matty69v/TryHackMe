@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-10-28 00:00:00 +0100
 title: 'TryHackMe - Silver Platter'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-10-28 00:00:00 +0100
 **Silver Platter** was a simple room where we discovered a **Silverpeas** installation along with a username. We brute-forced the user's password using a custom wordlist to gain access to **Silverpeas**, and by exploiting a vulnerability in it that allows an authenticated user to read all the messages, we uncovered **SSH** credentials in one of them.
 
 Using the discovered credentials to gain a shell, we found a password in the logs and used it to escalate to the **root** user, completing the room.

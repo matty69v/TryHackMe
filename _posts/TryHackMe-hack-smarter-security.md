@@ -1,4 +1,5 @@
 ﻿---
+date: 2024-06-24 00:00:00 +0100
 title: 'TryHackMe - Hack Smarter Security'
 author : Matty
 categories: [TryHackMe]
@@ -9,6 +10,7 @@ image:
   path: room_image.webp
 ---
 
+date: 2024-06-24 00:00:00 +0100
 [![Tryhackme Room Link](/images/tryhackme_hack_smarter_security/room_card.webp)](https://tryhackme.com/room/hacksmartersecurity){: .right }
 
 <br/><br/>
@@ -231,6 +233,7 @@ From `CHANGES.txt`, we learn that the version is `1.4.6`.
 tyler@HACKSMARTERSEC C:\Program Files (x86)\Spoofer>type CHANGES.txt 
 spoofer-1.4.6 (2020-07-24) 
 -------------
+date: 2024-06-24 00:00:00 +0100
 ...
 ```
 
@@ -331,6 +334,7 @@ tyler@HACKSMARTERSEC C:\Users\tyler>whoami /groups
 GROUP INFORMATION
 -----------------
 
+date: 2024-06-24 00:00:00 +0100
 Group Name                                                    Type             SID          Attributes
 
 ============================================================= ================ ============ ===================================
