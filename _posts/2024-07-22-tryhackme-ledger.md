@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [windows, nxc, netexec, ldap, active directory, ad, ad cs, esc1, impacket, certipy]
 render_with_liquid: false
-media_subpath: /images/tryhackme_ledger/
 image:
   path: room_image.webp
 ---

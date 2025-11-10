@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, xss, php, rfi, docker, pivoting, mysql, python, curl, sudo, apache2]
 render_with_liquid: false
-media_subpath: /images/tryhackme_robots/
 image:
   path: room_image.webp
 ---

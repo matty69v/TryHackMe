@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, ffuf, fuzzing, vhost, ssrf, ssh, john, sudo, ld_preload]
 render_with_liquid: false
-media_subpath: /images/tryhackme_creative/
 image:
   path: room_image.webp
 ---

@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, authentication bypass, rce, splunk]
 render_with_liquid: false
-media_subpath: /images/tryhackme_brains/
 image:
   path: room_image.webp
 ---

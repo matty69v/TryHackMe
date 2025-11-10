@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, fuzz, ffuf, php, rce, suid, apparmor]
 render_with_liquid: false
-media_subpath: /images/tryhackme_publisher/
 image:
   path: room_image.webp
 ---

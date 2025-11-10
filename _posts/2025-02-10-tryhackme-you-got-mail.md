@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, brute-force, hydra, cewl, phishing, post-exploitation]
 render_with_liquid: false
-media_subpath: /images/tryhackme_you_got_mail/
 image:
   path: room_image.webp
 ---

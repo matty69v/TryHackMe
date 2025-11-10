@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [python, ghidra, pwn, gdb, binary exploitation, shellcode, format string attack, heap, rop]
 render_with_liquid: false
-media_subpath: /images/tryhackme_trypwnme_two/
 image:
   path: room_image.webp
 ---

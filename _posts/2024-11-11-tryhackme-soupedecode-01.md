@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [windows, nxc, netexec, ad, active directory, impacket, password spraying, kerberoast, smb, hash spraying, pass-the-hash]
 render_with_liquid: false
-media_subpath: /images/tryhackme_soupedecode_01/
 image:
   path: room_image.webp
 ---

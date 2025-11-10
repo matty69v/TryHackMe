@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [windows, rce, unquoted service path, persistence, sysmon]
 render_with_liquid: false
-media_subpath: /images/tryhackme_mouse_trap/
 image:
   path: room_image.webp
 ---

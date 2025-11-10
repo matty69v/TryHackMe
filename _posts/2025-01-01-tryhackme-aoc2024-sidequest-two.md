@@ -5,7 +5,6 @@ categories: [TryHackMe]
 date: 2025-01-01 00:00:02 +0000
 tags: [web, xxe, ssrf, sudo, ros, python]
 render_with_liquid: false
-media_subpath: /images/tryhackme_aoc2024_sidequest_two/
 image:
   path: room_image.webp
 ---

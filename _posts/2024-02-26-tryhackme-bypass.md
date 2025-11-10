@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, nc, curl, ping, rce]
 render_with_liquid: false
-media_subpath: /images/tryhackme_bypass/
 image:
   path: room_image.webp
 ---

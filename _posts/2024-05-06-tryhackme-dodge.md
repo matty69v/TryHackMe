@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, vhost, subdomain, ufw, firewall, ftp, sudo, apt]
 render_with_liquid: false
-media_subpath: /images/tryhackme_dodge/
 image:
   path: room_image.webp
 ---

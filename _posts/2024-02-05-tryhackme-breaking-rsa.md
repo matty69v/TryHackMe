@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, rsa, cryptography, python, ssh]
 render_with_liquid: false
-media_subpath: /images/tryhackme_breaking_rsa/
 image:
   path: room_image.webp
 ---

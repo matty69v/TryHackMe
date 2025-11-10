@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, windows, rce, command injection, privilege esclation]
 render_with_liquid: false
-media_subpath: /images/tryhackme_cyberlens/
 image:
   path: room_image.webp
 ---

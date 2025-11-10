@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, padding oracle, docker]
 render_with_liquid: false
-media_subpath: /images/tryhackme_newyorkflankees/
 image:
   path: room_image.webp
 ---

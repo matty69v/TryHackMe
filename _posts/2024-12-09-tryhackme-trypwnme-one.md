@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [python, pwn, gdb, binary exploitation, buffer overflow, rop, ret2win, ret2libc, format string attack]
 render_with_liquid: false
-media_subpath: /images/tryhackme_trypwnme_one/
 image:
   path: room_image.webp
 ---

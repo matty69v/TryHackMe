@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, js, xss, csrf]
 render_with_liquid: false
-media_subpath: /images/tryhackme_whats_your_name/
 image:
   path: room_image.webp
 ---

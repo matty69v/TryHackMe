@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, vhost, brute-force, command injection, suid, path hijacking, sudo, arbitary file read]
 render_with_liquid: false
-media_subpath: /images/tryhackme_lookup/
 image:
   path: room_image.webp
 ---

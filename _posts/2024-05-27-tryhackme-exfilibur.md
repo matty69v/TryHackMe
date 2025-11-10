@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, cve, file disclosure, xxe, firewall, rce, windows, privilege]
 render_with_liquid: false
-media_subpath: /images/tryhackme_exfilibur/
 image:
   path: room_image.webp
 ---

@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, command injection, sudo, fail2ban]
 render_with_liquid: false
-media_subpath: /images/tryhackme_billing/
 image:
   path: room_image.webp
 ---

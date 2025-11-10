@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, wordpress, wpscan, file disclosure, rce, backdoor, php, mysql, john, hash, pam, zip]
 render_with_liquid: false
-media_subpath: /images/tryhackme_smol/
 image:
   path: room_image.webp
 ---

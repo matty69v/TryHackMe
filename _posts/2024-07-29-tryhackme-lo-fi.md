@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, lfi, log poisoning, rce]
 render_with_liquid: false
-media_subpath: /images/tryhackme_lo-fi/
 image:
   path: room_image.webp
 ---

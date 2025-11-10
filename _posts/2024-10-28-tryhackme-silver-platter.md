@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, brute-force, ffuf, idor, ssh, adm, log]
 render_with_liquid: false
-media_subpath: /images/tryhackme_silver_platter/
 image:
   path: room_image.webp
 ---

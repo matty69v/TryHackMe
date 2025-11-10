@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, ffuf, fuzz, wordpress, brute-force, chisel, command injection, race condition, sudo, python, jail]
 render_with_liquid: false
-media_subpath: /images/tryhackme_breakme/
 image:
   path: room_image.webp
 ---

@@ -4,7 +4,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, php, sqli, ssh, cron, command injection]
 render_with_liquid: false
-media_subpath: /images/tryhackme_kitty/
 image:
   path: room_image.webp
 ---

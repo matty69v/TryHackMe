@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, race condition, ssti,  python]
 render_with_liquid: false
-media_subpath: /images/tryhackme_burg3rbytes/
 image:
   path: room_image.webp
 ---

@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, file disclosure, ssh, windows, service]
 render_with_liquid: false
-media_subpath: /images/tryhackme_hack_smarter_security/
 image:
   path: room_image.webp
 ---

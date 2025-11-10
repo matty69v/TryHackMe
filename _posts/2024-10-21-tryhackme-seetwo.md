@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [pcap, wireshark, http, tcp, c2, python, xor, base64]
 render_with_liquid: false
-media_subpath: /images/tryhackme_seetwo/
 image:
   path: room_image.webp
 ---

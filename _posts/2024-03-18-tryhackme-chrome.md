@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [pcap, smb, wireshark, dnspy, windows, chrome, dpapi, mimikatz]
 render_with_liquid: false
-media_subpath: /images/tryhackme_chrome/
 image:
   path: room_image.webp
 ---

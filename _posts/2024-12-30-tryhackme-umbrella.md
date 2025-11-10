@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, node, docker, mysql, rce]
 render_with_liquid: false
-media_subpath: /images/tryhackme_umbrella/
 image:
   path: room_image.webp
 ---

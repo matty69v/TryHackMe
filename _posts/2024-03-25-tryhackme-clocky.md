@@ -5,7 +5,6 @@ author : Matty
 categories: [TryHackMe]
 tags: [web, ffuf, python, flask, ssrf, mysql, hashcat]
 render_with_liquid: false
-media_subpath: /images/tryhackme_clocky/
 image:
   path: room_image.webp
 ---
