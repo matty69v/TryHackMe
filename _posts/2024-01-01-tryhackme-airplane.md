@@ -6,7 +6,7 @@ categories: [TryHackMe]
 tags: [web, file disclosure, gdb, suid, sudo]
 render_with_liquid: false
 image:
-  path: /images/tryhackme_airplane/room_card.webp
+  path: /images/tryhackme_airplane/room_image.webp
 ---
 
 Airplane started with discovering a file disclosure vulnerability in a web application. This vulnerability allowed us to identify another service running on a different port.<br>
