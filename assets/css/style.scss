@@ -1,12 +1,10 @@
----
----
+@import "jekyll-theme-chirpy";
 
 /* ==========================================================================
    Custom CSS pour TryHackMe Blog - Thème Cybersécurité
    ========================================================================== */
 
 :root {
-  /* Couleurs principales - Thème dark avec accents cyan/bleu */
   --main-bg: #0a0e27;
   --card-bg: #111827;
   --sidebar-bg: #0f172a;
@@ -21,12 +19,8 @@
   --btn-bg: #1e293b;
   --btn-hover-bg: #334155;
   --highlight-bg: rgba(56, 189, 248, 0.1);
-  
-  /* Couleurs pour les tags et catégories */
   --tag-bg: #1e293b;
   --tag-hover: #334155;
-  
-  /* Ombres pour donner de la profondeur */
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 }
@@ -37,7 +31,7 @@ body {
   color: var(--text-color);
 }
 
-/* Cards et conteneurs */
+/* Cards */
 .card,
 #post-list .card,
 .post-preview {
@@ -71,177 +65,30 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-/* Headings avec accent */
+/* Titres */
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
-  position: relative;
 }
 
-h1::before, h2::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 70%;
-  background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
-  border-radius: 2px;
-}
-
-/* Code blocks */
-pre,
+/* Code / Blockquote / Images */
 code {
   background: var(--code-bg);
-  border: 1px solid var(--border-color);
   border-radius: 4px;
+  padding: 0.2rem 0.4rem;
 }
-
 pre {
   padding: 1rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: var(--code-bg);
+  border-radius: 6px;
 }
-
-/* Blockquotes avec style cybersec */
 blockquote {
   border-left: 4px solid var(--blockquote-border-color);
-  background: rgba(56, 189, 248, 0.05);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 0 4px 4px 0;
-}
-
-/* Tags et catégories */
-.tag,
-.category {
-  background: var(--tag-bg);
-  color: var(--text-color);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
-  transition: all 0.2s ease;
-}
-
-.tag:hover,
-.category:hover {
-  background: var(--tag-hover);
-  border-color: var(--link-color);
-  transform: translateY(-1px);
-}
-
-/* Boutons */
-.btn {
-  background: var(--btn-bg);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  transition: all 0.2s ease;
-}
-
-.btn:hover {
-  background: var(--btn-hover-bg);
-  border-color: var(--link-color);
-  transform: translateY(-1px);
-}
-
-/* Images dans les posts */
-.post-content img {
-  border-radius: 8px;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.3s ease;
-}
-
-.post-content img:hover {
-  transform: scale(1.02);
-}
-
-/* Table des matières */
-#toc {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  background: var(--highlight-bg);
   padding: 1rem;
-}
-
-/* Scrollbar personnalisée */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--main-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--link-color);
-}
-
-/* Animation pour les titres */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.post-title,
-#page-title {
-  animation: fadeInUp 0.6s ease;
-}
-
-/* Highlight pour le code inline */
-code {
-  color: #7dd3fc;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.9em;
 }
 
 /* Footer */
 footer {
   background: var(--sidebar-bg);
   border-top: 1px solid var(--border-color);
-}
-
-/* Archives timeline */
-.archive-item::before {
-  background: var(--link-color);
-}
-
-/* Search bar */
-#search-input {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  border-radius: 6px;
-}
-
-#search-input:focus {
-  border-color: var(--link-color);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
-}
-
-/* Pagination */
-.pagination .page-item.active .page-link {
-  background: var(--link-color);
-  border-color: var(--link-color);
-}
-
-.pagination .page-link {
-  background: var(--card-bg);
-  border-color: var(--border-color);
-  color: var(--text-color);
-}
-
-.pagination .page-link:hover {
-  background: var(--btn-hover-bg);
-  border-color: var(--link-color);
 }
