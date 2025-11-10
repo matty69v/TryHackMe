@@ -1,8 +1,17 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
 gem "jekyll-remote-theme"
 gem "html-proofer", "~> 5.0", group: :test
+
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
+  gem "jekyll-seo-tag"
+  gem "jekyll-archives"
+  gem "jekyll-sitemap"
+  gem "jekyll-include-cache"
+end
 
 # Windows and JRuby does not include zoneinfo files
 platforms :mingw, :x64_mingw, :mswin, :jruby do
