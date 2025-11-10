@@ -17,7 +17,7 @@ github:
 timezone: Europe/Paris
 
 # Theme - Using remote theme for GitHub Pages compatibility
-theme: jekyll-theme-chirpy
+remote_theme: cotes2020/jekyll-theme-chirpy
 
 # Pagination
 paginate: 10
@@ -69,6 +69,7 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-remote-theme
 
 # Archives
 jekyll-archives:
