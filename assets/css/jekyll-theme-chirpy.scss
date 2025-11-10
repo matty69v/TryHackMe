@@ -1,0 +1,318 @@
+
+@import "main";
+
+/* ==========================================================================
+   Custom Theme Override - Cybersecurity Dark Theme
+   ========================================================================== */
+
+:root {
+  /* Couleurs de fond */
+  --main-bg: #0a0e27;
+  --body-bg: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  --mask-bg: #0a0e27;
+  --sidebar-bg: #0f172a;
+  --card-bg: #111827;
+  
+  /* Couleurs de texte */
+  --text-color: #e2e8f0;
+  --text-muted-color: #94a3b8;
+  --heading-color: #f1f5f9;
+  --label-color: #cbd5e1;
+  
+  /* Couleurs d'accent */
+  --link-color: #38bdf8;
+  --link-hover-color: #7dd3fc;
+  --link-underline-color: #0ea5e9;
+  --btn-bg: #1e293b;
+  --btn-border-color: #334155;
+  --btn-backtotop-color: #38bdf8;
+  --btn-backtotop-border-color: #38bdf8;
+  
+  /* Bordures et séparateurs */
+  --main-border-color: #1e293b;
+  --border-color: #1e293b;
+  --footer-border-color: #1e293b;
+  --tb-odd-bg: rgba(56, 189, 248, 0.05);
+  --tb-border-color: #1e293b;
+  
+  /* Code */
+  --code-bg: #1e293b;
+  --highlighter-rouge-color: #7dd3fc;
+  --highlight-bg-color: rgba(56, 189, 248, 0.1);
+  
+  /* Blockquote */
+  --blockquote-border-color: #38bdf8;
+  --blockquote-text-color: #cbd5e1;
+  
+  /* Tags et catégories */
+  --tag-bg: #1e293b;
+  --tag-hover: #334155;
+  --tag-border-color: #334155;
+  
+  /* Search */
+  --search-wrapper-bg: #111827;
+  --search-input-bg: #1e293b;
+  --search-icon-color: #64748b;
+  
+  /* TOC */
+  --toc-highlight: #38bdf8;
+  
+  /* Scrollbar */
+  --scrollbar-track-bg: #0a0e27;
+  --scrollbar-thumb-bg: #1e293b;
+  --scrollbar-thumb-hover-bg: #38bdf8;
+}
+
+/* Override du background body avec gradient */
+body {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Cards avec ombres et effets */
+.card,
+#post-list .card-wrapper .card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover,
+#post-list .card-wrapper .card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+  border-color: var(--link-color) !important;
+}
+
+/* Sidebar styling */
+#sidebar {
+  background: var(--sidebar-bg) !important;
+  border-right: 1px solid var(--border-color) !important;
+}
+
+/* Headings avec accent */
+.post-content h1,
+.post-content h2 {
+  position: relative;
+  padding-left: 15px;
+}
+
+.post-content h1::before,
+.post-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
+  border-radius: 2px;
+}
+
+/* Code blocks améliorés */
+pre {
+  background: var(--code-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+code {
+  background: var(--code-bg) !important;
+  color: var(--highlighter-rouge-color) !important;
+  border-radius: 4px !important;
+  padding: 0.2rem 0.4rem !important;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--blockquote-border-color) !important;
+  background: rgba(56, 189, 248, 0.05) !important;
+  padding: 1rem 1.5rem !important;
+  border-radius: 0 4px 4px 0 !important;
+}
+
+/* Tags et catégories */
+.tag,
+.post-tag {
+  background: var(--tag-bg) !important;
+  border: 1px solid var(--tag-border-color) !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.tag:hover,
+.post-tag:hover {
+  background: var(--tag-hover) !important;
+  border-color: var(--link-color) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Boutons */
+.btn {
+  background: var(--btn-bg) !important;
+  border: 1px solid var(--btn-border-color) !important;
+  transition: all 0.2s ease !important;
+  border-radius: 6px !important;
+}
+
+.btn:hover {
+  background: #334155 !important;
+  border-color: var(--link-color) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Images dans les posts */
+.post-content img,
+#post-wrapper img {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.post-content img:hover,
+#post-wrapper img:hover {
+  transform: scale(1.02) !important;
+}
+
+/* TOC */
+#toc-wrapper {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-bg);
+}
+
+/* Animation pour les titres de posts */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-title,
+#page-title {
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Footer */
+footer {
+  background: var(--sidebar-bg) !important;
+  border-top: 1px solid var(--footer-border-color) !important;
+}
+
+/* Search bar */
+#search-input {
+  background: var(--search-input-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+  border-radius: 6px !important;
+}
+
+#search-input:focus {
+  border-color: var(--link-color) !important;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1) !important;
+}
+
+/* Pagination */
+.pagination .page-item.active .page-link {
+  background: var(--link-color) !important;
+  border-color: var(--link-color) !important;
+}
+
+.pagination .page-link {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-color) !important;
+  border-radius: 4px !important;
+}
+
+.pagination .page-link:hover {
+  background: var(--btn-bg) !important;
+  border-color: var(--link-color) !important;
+}
+
+/* Archive timeline */
+.list-group-item.active {
+  background-color: var(--link-color) !important;
+  border-color: var(--link-color) !important;
+}
+
+/* Post preview cards */
+.post-preview {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.post-preview:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3) !important;
+  border-color: var(--link-color) !important;
+}
+
+/* Liens dans le contenu */
+.post-content a {
+  color: var(--link-color) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.post-content a:hover {
+  color: var(--link-hover-color) !important;
+  border-bottom-color: var(--link-hover-color) !important;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+table thead {
+  background: var(--tag-bg) !important;
+  border-bottom: 2px solid var(--link-color) !important;
+}
+
+table tbody tr:nth-child(odd) {
+  background: var(--tb-odd-bg) !important;
+}
+
+table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.08) !important;
+}
+
+table td, table th {
+  border: 1px solid var(--tb-border-color) !important;
+  padding: 0.5rem !important;
+}
